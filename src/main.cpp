@@ -15,7 +15,6 @@ int main()
      
     }
     
-    
     do{
         cout<<"1. Tek basamaklari Basa Al"<< endl;
         cout<<"2. Basamaklari tersle"<< endl;
@@ -49,4 +48,5 @@ int main()
 
 
     }while(girdi!=4);
+
 }
