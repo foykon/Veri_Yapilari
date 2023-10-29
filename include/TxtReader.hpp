@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include "SayilarListesi.hpp"
 
 class TxtReader {
 public:
@@ -14,6 +15,8 @@ public:
 private:
     std::string filename_;
     std::vector<int> numbers_;
+    SayilarListesi sayilarListesi;
+    
 };
 
 #endif
