@@ -1,9 +1,21 @@
 #include <iostream>
+#include "TxtReader.hpp"
 
 using namespace std;
 int main()
 {
     int girdi;
+    TxtReader reader("veri.txt");
+    if (reader.ReadNumbers()) {
+        reader.PrintNumbers();
+
+        // Vektöre erişmek için
+        std::vector<int> numbers = reader.GetNumbers();
+
+        // numbers vektörünü kullanabilirsiniz
+    }
+    
+    
     do{
         cout<<"1. Tek basamaklari Basa Al"<< endl;
         cout<<"2. Basamaklari tersle"<< endl;
