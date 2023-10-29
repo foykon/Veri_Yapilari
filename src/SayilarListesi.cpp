@@ -37,6 +37,7 @@ void SayilarListesi::push(int value) {
     for (int i = newNode->basamakSayisi - 1; i >= 0; i--) {
         int basamak = (tempNumber / static_cast<int>(pow(10, i))) % 10;
         
+        //sayi sınıfı üzerinden çağırılıyor ve bulunan basamaklar ekle konutuyla oraya ekleniyor
         newNode->basamakListesi.ekle(basamak);
     }
 

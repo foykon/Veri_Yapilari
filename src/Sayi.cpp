@@ -11,12 +11,14 @@ Sayi::~Sayi() {
     }
 }
 
+//ekleme fonksiyonu
 void Sayi::ekle(int value) {
     Node* yeniNode = new Node(value);
     yeniNode->next = bas;
     bas = yeniNode;
 }
 
+//silme fonksiyonu
 void Sayi::sil(int value) {
     Node* onceki = nullptr;
     Node* simdiki = bas;
@@ -36,6 +38,7 @@ void Sayi::sil(int value) {
     }
 }
 
+//adres yazdırma fonksiyonu sayilarlistesi.cpp de kullanıyoruz
 void Sayi::adresYazdir() const{
     Node* temp = bas;
     while (temp != nullptr) {
@@ -45,6 +48,7 @@ temp = temp->next;
 
 }
 
+//değer yazdırma fonksiyonu sayilarlistesi.cpp de kullanıyoruz
 void Sayi::degerYazdir() const{
     Node* temp = bas;
     while (temp != nullptr) {
@@ -54,7 +58,7 @@ void Sayi::degerYazdir() const{
 
 }
 
-
+//ilk yazdığımda listeleme yaparken kullandığım eski bir fonksiyon
 void Sayi::listele() const {
     Node* temp = bas;
     while (temp != nullptr) {
@@ -71,10 +75,12 @@ void Sayi::listele() const {
     std::cout << std::endl;
 }
 
+
 bool Sayi::bosMu() const {
     return bas == nullptr;
 }
 
+//basamak değerlerini tersten yazdığı için listeyi tersten tekrar yazdırmak için fonksiyon
 void Sayi::tekrarSirala() {
         Node* prev = nullptr;
         Node* current = bas;
