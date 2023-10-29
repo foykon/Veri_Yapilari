@@ -36,10 +36,36 @@ void Sayi::sil(int value) {
     }
 }
 
+void Sayi::adresYazdir() const{
+    Node* temp = bas;
+    while (temp != nullptr) {
+        std::cout << "*" << temp << "*  ";
+temp = temp->next;
+    }
+
+}
+
+void Sayi::degerYazdir() const{
+    Node* temp = bas;
+    while (temp != nullptr) {
+        std::cout << "*   " << temp->data << "    *  ";
+        temp = temp->next;
+    }
+
+}
+
+
 void Sayi::listele() const {
     Node* temp = bas;
     while (temp != nullptr) {
-        std::cout << temp->data << " ";
+        
+        std::cout << "********" << std::endl;
+        std::cout << "*" << temp << "*" << std::endl;
+        std::cout << "*--------*" << std::endl;
+        std::cout << "*    " << temp->data << "    *" << std::endl;
+        std::cout << "********" << std::endl;
+        
+        
         temp = temp->next;
     }
     std::cout << std::endl;

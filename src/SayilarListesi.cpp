@@ -24,17 +24,17 @@ void SayilarListesi::push(int value) {
     
     
     //divide(newNode->data);
-    int basamakSayisi = 0;
+    newNode->basamakSayisi = 0;
     int tempNumber = value;
 
     while (tempNumber > 0) {
         tempNumber /= 10;
-        basamakSayisi++;
+        newNode->basamakSayisi++;
     }
 
     tempNumber = value;
     
-    for (int i = basamakSayisi - 1; i >= 0; i--) {
+    for (int i = newNode->basamakSayisi - 1; i >= 0; i--) {
         int basamak = (tempNumber / static_cast<int>(pow(10, i))) % 10;
         
         newNode->basamakListesi.ekle(basamak);
@@ -49,14 +49,47 @@ void SayilarListesi::push(int value) {
 //istenen değerleri yazdıran bir fonksiyon
 void SayilarListesi::print() {
     Node* current = head;
+    int tempBasamakSayisi=current->basamakSayisi;
     while (current) {
-        std::cout << "##########" << std::endl;
-        std::cout << "#" << current << "#" << std::endl;
-        std::cout << "#--------#" << std::endl;
-        std::cout << "#  " << current->data << "  #" << std::endl;
-        std::cout << "##########" << std::endl;
-        current->basamakListesi.listele();
-        std::cout << std::endl;
+        
+        //üst çizgi
+        std::cout << "##########  ";
+        for (;tempBasamakSayisi>0;tempBasamakSayisi--){
+            std::cout << "**********  ";
+        }
+        std::cout<<std::endl;
+        
+        //adres değerleri
+        tempBasamakSayisi=current->basamakSayisi;
+        std::cout << "#" << current << "#  ";
+        current->basamakListesi.adresYazdir();
+        std::cout<<std::endl;
+
+        // //orta çizgi
+         tempBasamakSayisi=current->basamakSayisi;
+         std::cout << "#--------#  ";
+         for (;tempBasamakSayisi>0;tempBasamakSayisi--){
+             std::cout << "*--------*  ";
+         }
+         std::cout<<std::endl;
+
+        // //sayısal değerler
+         tempBasamakSayisi=current->basamakSayisi;
+     std::cout << "# " << current->data << " #  " ;
+         current->basamakListesi.degerYazdir();
+ std::cout<<std::endl;
+
+        
+        // //alt çizgi
+         tempBasamakSayisi=current->basamakSayisi;
+         std::cout << "##########  ";
+        for (;tempBasamakSayisi>0;tempBasamakSayisi--){
+            std::cout << "**********  ";
+        }
+        std::cout<<std::endl;        
+        
+         //current->basamakListesi.listele();
+        // std::cout << std::endl;
         current = current->next;
     }
 }

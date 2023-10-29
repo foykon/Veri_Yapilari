@@ -17,9 +17,12 @@ private:
         int data;
         Node* next;
         Sayi basamakListesi;
+        int basamakSayisi;
+        
     };
-
+    
     Node* head;
+    
     
 };
 

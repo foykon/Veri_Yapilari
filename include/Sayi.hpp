@@ -19,6 +19,8 @@ public:
     void ekle(int value);
     void sil(int value);
     void listele() const;
+    void adresYazdir() const;
+    void degerYazdir() const;
     bool bosMu() const;
 };
 
