@@ -10,7 +10,7 @@ TxtReader::TxtReader(const std::string& filename) : filename_(filename) {}
 bool TxtReader::ReadNumbers() {
     std::ifstream file(filename_);
     if (!file.is_open()) {
-        std::cerr << "Dosya açılamadı: " << filename_ << std::endl;
+        std::cerr << "Dosya açilamadi: " << filename_ << std::endl;
         return false;
     }
 

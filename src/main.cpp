@@ -12,7 +12,7 @@ int main()
         // Vektöre erişmek için
         std::vector<int> numbers = reader.GetNumbers();
 
-        // numbers vektörünü kullanabilirsiniz
+     
     }
     
     

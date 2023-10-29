@@ -1,5 +1,6 @@
 #include "SayilarListesi.hpp"
 #include <iostream>
+#include <iomanip>
 
 //kurucu fonksiyon
 SayilarListesi::SayilarListesi() {
@@ -23,16 +24,20 @@ void SayilarListesi::push(int value) {
     head = newNode;
 }
 
-//datayı ytazdıran fonksiyon
+//istenen değerleri yazdıran bir fonksiyon
 void SayilarListesi::print() {
     Node* current = head;
     while (current) {
-        std::cout << "Data: " << current->data << std::endl;
+        std::cout << "##########" << std::endl;
+        std::cout << "#" << current << "#" << std::endl;
+        std::cout << "#--------#" << std::endl;
+        std::cout << "#  " << current->data << "  #" << std::endl;
+        std::cout << "##########" << std::endl << std::endl;
         current = current->next;
     }
 }
 
-//datanın adresini yazdıran fonksiyon
+//datanın adresini yazdıran eski bir fonksiyon
 void SayilarListesi::printAddresses() {
     Node* current = head;
     while (current) {
