@@ -74,3 +74,18 @@ void Sayi::listele() const {
 bool Sayi::bosMu() const {
     return bas == nullptr;
 }
+
+void Sayi::tekrarSirala() {
+        Node* prev = nullptr;
+        Node* current = bas;
+        Node* nextNode = nullptr;
+
+        while (current != nullptr) {
+            nextNode = current->next;
+            current->next = prev;
+            prev = current;
+            current = nextNode;
+        }
+
+        bas = prev;
+    }

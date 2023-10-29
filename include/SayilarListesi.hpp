@@ -11,7 +11,7 @@ public:
     void print();
     void printAddresses();
     void divide(int number);
-
+    void reverse();
 private:
     struct Node {
         int data;

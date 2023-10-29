@@ -48,16 +48,20 @@ void SayilarListesi::push(int value) {
 
 //istenen değerleri yazdıran bir fonksiyon
 void SayilarListesi::print() {
+    reverse();
     Node* current = head;
+    
     int tempBasamakSayisi=current->basamakSayisi;
     while (current) {
+        current->basamakListesi.tekrarSirala();
         
         //üst çizgi
-        std::cout << "##########  ";
+         tempBasamakSayisi=current->basamakSayisi;
+         std::cout << "##########  ";
         for (;tempBasamakSayisi>0;tempBasamakSayisi--){
             std::cout << "**********  ";
         }
-        std::cout<<std::endl;
+        std::cout<<std::endl;   
         
         //adres değerleri
         tempBasamakSayisi=current->basamakSayisi;
@@ -75,7 +79,7 @@ void SayilarListesi::print() {
 
         // //sayısal değerler
          tempBasamakSayisi=current->basamakSayisi;
-     std::cout << "# " << current->data << " #  " ;
+     std::cout << "#  " << current->data << " #  " ;
          current->basamakListesi.degerYazdir();
  std::cout<<std::endl;
 
@@ -89,9 +93,10 @@ void SayilarListesi::print() {
         std::cout<<std::endl;        
         
          //current->basamakListesi.listele();
-        // std::cout << std::endl;
+         std::cout << std::endl;
         current = current->next;
     }
+
 }
 
 //datanın adresini yazdıran eski bir fonksiyon
@@ -125,3 +130,17 @@ void SayilarListesi::divide(int number){
     std::cout << std::endl;
 }
 
+void SayilarListesi::reverse() {
+        Node* prev = nullptr;
+        Node* current = head;
+        Node* nextNode = nullptr;
+
+        while (current != nullptr) {
+            nextNode = current->next;
+            current->next = prev;
+            prev = current;
+            current = nextNode;
+        }
+
+        head = prev;
+    }

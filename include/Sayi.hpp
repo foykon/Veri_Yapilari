@@ -22,6 +22,7 @@ public:
     void adresYazdir() const;
     void degerYazdir() const;
     bool bosMu() const;
+    void tekrarSirala();
 };
 
 #endif
