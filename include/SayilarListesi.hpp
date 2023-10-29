@@ -12,7 +12,11 @@ public:
     void printAddresses();
     void divide(int number);
     void reverse();
+    void case2();
+    void case1();
+    void case3();
 private:
+    
     struct Node {
         int data;
         Node* next;
@@ -20,7 +24,6 @@ private:
         int basamakSayisi;
         
     };
-    
     Node* head;
     
     

@@ -19,6 +19,10 @@ int main()
 
      
     }
+
+
+    SayilarListesi sayilarListesi = reader.sayilarListesi; 
+    
     
     do{
         cout<<"1. Tek basamaklari Basa Al"<< endl;
@@ -30,16 +34,25 @@ int main()
 
         switch (girdi){
         case 1:
-            cout << "1. Tek basamaklari Basa Al"<< endl;
+            sayilarListesi.reverse();
+            
+            sayilarListesi.case1();
+            sayilarListesi.print();
+
+
             break;
 
         case 2:
-            cout << "2. Basamaklari tersle"<< endl;
+            sayilarListesi.reverse();
+            sayilarListesi.case2();
+            sayilarListesi.print();
             break;    
         
 
         case 3:
-            cout << "3. En buyuk cikar"<< endl;
+            sayilarListesi.reverse();
+            sayilarListesi.case3();
+            sayilarListesi.print();
             break;
 
 

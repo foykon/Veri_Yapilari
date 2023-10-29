@@ -49,12 +49,12 @@ void SayilarListesi::push(int value) {
 
 //istenen değerleri yazdıran bir fonksiyon
 void SayilarListesi::print() {
-    reverse();
+    
     Node* current = head;
     
     int tempBasamakSayisi=current->basamakSayisi;
     while (current) {
-        current->basamakListesi.tekrarSirala();
+        
         
         //üst çizgi
          tempBasamakSayisi=current->basamakSayisi;
@@ -144,4 +144,50 @@ void SayilarListesi::reverse() {
         }
 
         head = prev;
+}
+void SayilarListesi::case1(){
+    Node* current = head;
+    
+    while (current != nullptr) {
+        current->basamakListesi.moveOddNumbersToBeginning();
+        current = current->next;
     }
+
+}
+
+void SayilarListesi::case2(){
+    Node* current = head;
+    while (current != nullptr) {
+        current->basamakListesi.tekrarSirala();
+        current = current->next;
+    }
+}
+
+void SayilarListesi::case3(){
+    if (head == nullptr) {
+            std::cout << "Liste boş." << std::endl;
+            return;
+        }
+
+        Node* current = head;
+        Node* prev = nullptr;
+        Node* maxNode = head;
+        int maxData = head->data;
+
+        while (current != nullptr) {
+            if (current->data > maxData) {
+                maxData = current->data;
+                maxNode = current;
+            }
+            prev = current;
+            current = current->next;
+        }
+
+        if (maxNode == head) {
+            head = head->next;
+        } else {
+            prev->next = maxNode->next;
+        }
+
+        delete maxNode;
+}

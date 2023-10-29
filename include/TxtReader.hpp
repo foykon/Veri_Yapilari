@@ -11,11 +11,11 @@ public:
     bool ReadNumbers();
     void PrintNumbers() const;
     std::vector<int> GetNumbers() const;
+    SayilarListesi sayilarListesi;
 
 private:
     std::string filename_;
     std::vector<int> numbers_;
-    SayilarListesi sayilarListesi;
     
 };
 
