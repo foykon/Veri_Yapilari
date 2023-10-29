@@ -1,4 +1,4 @@
-#include "sayi.hpp"
+#include "Sayi.hpp"
 #include <iostream>
 
 Sayi::Sayi() : bas(nullptr) {}

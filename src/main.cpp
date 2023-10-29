@@ -4,6 +4,11 @@
 using namespace std;
 int main()
 {
+
+   
+
+
+
     int girdi;
     TxtReader reader("veri.txt");
     if (reader.ReadNumbers()) {

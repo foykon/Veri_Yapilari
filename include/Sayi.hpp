@@ -1,5 +1,5 @@
-#ifndef SAYI_HPP
-#define SAYI_HPP
+#ifndef Sayi_HPP
+#define Sayi_HPP
 
 class Sayi {
 private:

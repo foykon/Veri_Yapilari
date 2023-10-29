@@ -1,5 +1,6 @@
 #ifndef SayilarListesi_HPP
 #define SayilarListesi_HPP
+#include "Sayi.hpp"
 
 class SayilarListesi {
 public:
@@ -9,14 +10,17 @@ public:
     void push(int value);
     void print();
     void printAddresses();
+    void divide(int number);
 
 private:
     struct Node {
         int data;
         Node* next;
+        Sayi basamakListesi;
     };
 
     Node* head;
+    
 };
 
 #endif 
