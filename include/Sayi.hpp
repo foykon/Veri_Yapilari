@@ -23,6 +23,7 @@ public:
     void degerYazdir() const;
     bool bosMu() const;
     void tekrarSirala();
+    void moveOddNumbersToBeginning();
 };
 
 #endif

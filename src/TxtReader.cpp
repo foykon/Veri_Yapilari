@@ -32,6 +32,7 @@ bool TxtReader::ReadNumbers() {
 
 
     //şuanda output almak için kullandığım proint fonksiyonları
+
     sayilarListesi.print();
     file.close();
     return true;

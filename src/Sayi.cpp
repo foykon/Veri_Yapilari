@@ -94,4 +94,35 @@ void Sayi::tekrarSirala() {
         }
 
         bas = prev;
+}
+
+void Sayi::moveOddNumbersToBeginning() {
+        if (!bas || !bas->next) {
+            return;  // Liste boş veya tek elemanlıysa işlem yapmaya gerek yok
+        }
+
+        Node* current = bas;
+        Node* oddListHead = nullptr; // 2'ye bölünemeyen sayıların başı
+        Node* oddListTail = nullptr; // 2'ye bölünemeyen sayıların sonu
+
+        while (current && current->next) {
+            if (current->next->data % 2 != 0) {
+                // 2'ye bölünemeyen sayıyı kesip oddList'e ekliyoruz
+                if (!oddListHead) {
+                    oddListHead = oddListTail = current->next;
+                } else {
+                    oddListTail->next = current->next;
+                    oddListTail = current->next;
+                }
+                current->next = current->next->next;
+            } else {
+                current = current->next;
+            }
+        }
+
+        if (oddListHead) {
+            // Eğer 2'ye bölünemeyen sayılar varsa, bunları listenin başına ekliyoruz
+            oddListTail->next = bas;
+            bas = oddListHead;
+        }
     }

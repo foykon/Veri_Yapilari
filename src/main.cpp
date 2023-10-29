@@ -12,10 +12,10 @@ int main()
     int girdi;
     TxtReader reader("veri.txt");
     if (reader.ReadNumbers()) {
-        reader.PrintNumbers();
+        //reader.PrintNumbers();
 
         // Vektöre erişmek için
-        std::vector<int> numbers = reader.GetNumbers();
+        //std::vector<int> numbers = reader.GetNumbers();
 
      
     }
