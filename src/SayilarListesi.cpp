@@ -174,12 +174,13 @@ void SayilarListesi::case3(){
         Node* maxNode = head;
         int maxData = head->data;
 
-        while (current != nullptr) {
-            if (current->data > maxData) {
-                maxData = current->data;
-                maxNode = current;
+        while (current->next != nullptr) {
+            if (current->next->data > maxData) {
+                maxData = current->next->data;
+                maxNode = current->next;
+                prev = current;
             }
-            prev = current;
+            
             current = current->next;
         }
 
