@@ -1,3 +1,12 @@
+/**
+* @file SAyilarListesi.cpp
+* @description txtden okunan sayıları bağlı liste ile tuttuğumuz kod bloğu ve özel fonksiyonları
+* @course 1. Öğretim A grubu
+* @assignment 1.Ödev
+* @date 29 Oct 2023
+* @author  G201210014 Furkan YILDIZ furkan.yildiz12@ogr.sakarya.edu.tr
+*/
+
 #include "SayilarListesi.hpp"
 #include <iostream>
 #include <iomanip>
@@ -19,7 +28,7 @@ SayilarListesi::~SayilarListesi() {
 
 //listeye ekleme yapma fonksiyonu
 void SayilarListesi::push(int value) {
-    Node* newNode = new Node;
+    Node* newNode = new Node();
     newNode->data = value;
     
     
@@ -189,6 +198,10 @@ void SayilarListesi::case3(){
         } else {
             prev->next = maxNode->next;
         }
-
+        
+        //önce basamakları siliyoruz
+        //std::cout<<"çağar";
+        maxNode->basamakListesi.~Sayi();
+        //sonra düğümün kendisini
         delete maxNode;
 }

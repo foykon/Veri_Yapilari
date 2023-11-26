@@ -1,3 +1,11 @@
+/**
+* @file main.cpp
+* @description Main kodunda hangi txtnin okuncağını belirttiğimiz ve do while ile istediğimiz işlemi yapmaya yarayan kodlar mevcut
+* @course 1. Öğretim A grubu
+* @assignment 1.Ödev
+* @date 29 Oct 2023
+* @author  G201210014 Furkan YILDIZ furkan.yildiz12@ogr.sakarya.edu.tr
+*/
 #include <iostream>
 #include "TxtReader.hpp"
 

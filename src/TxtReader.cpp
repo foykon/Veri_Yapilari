@@ -1,3 +1,12 @@
+/**
+* @file TxtReader.cpp
+* @description txt ile gelen verileri okuduğumuz ve sayılarListesine göndererek bağlı liste yaptımız kod bloğu
+* @course 1. Öğretim A grubu
+* @assignment 1.Ödev
+* @date 29 Oct 2023
+* @author  G201210014 Furkan YILDIZ furkan.yildiz12@ogr.sakarya.edu.tr
+*/
+
 #include "TxtReader.hpp"
 #include "SayilarListesi.hpp"
 #include <iostream>

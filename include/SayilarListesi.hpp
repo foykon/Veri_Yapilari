@@ -1,3 +1,12 @@
+/**
+* @file SAyilarListesi.hpp
+* @description SAyilarListesi.cpp in arayüzü
+* @course 1. Öğretim A grubu
+* @assignment 1.Ödev
+* @date 29 Oct 2023
+* @author  G201210014 Furkan YILDIZ furkan.yildiz12@ogr.sakarya.edu.tr
+*/
+
 #ifndef SayilarListesi_HPP
 #define SayilarListesi_HPP
 #include "Sayi.hpp"

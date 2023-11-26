@@ -1,3 +1,12 @@
+/**
+* @file Sayi.cpp
+* @description Sayilarin basamaklarını tuttuğumuz kod ve özel fonksiyonları
+* @course 1. Öğretim A grubu
+* @assignment 1.Ödev
+* @date 29 Oct 2023
+* @author  G201210014 Furkan YILDIZ furkan.yildiz12@ogr.sakarya.edu.tr
+*/
+
 #include "Sayi.hpp"
 #include <iostream>
 
@@ -5,6 +14,7 @@ Sayi::Sayi() : bas(nullptr) {}
 
 Sayi::~Sayi() {
     while (bas != nullptr) {
+        //std::cout<<"çağardı";
         Node* temp = bas;
         bas = bas->next;
         delete temp;

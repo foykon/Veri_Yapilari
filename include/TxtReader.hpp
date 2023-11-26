@@ -1,3 +1,12 @@
+/**
+* @file TxtReader.hpp
+* @description TxtReader.cpp in arayüzü
+* @course 1. Öğretim A grubu
+* @assignment 1.Ödev
+* @date 29 Oct 2023
+* @author  G201210014 Furkan YILDIZ furkan.yildiz12@ogr.sakarya.edu.tr
+*/
+
 #ifndef TxtReader_HPP
 #define TxtReader_HPP
 
